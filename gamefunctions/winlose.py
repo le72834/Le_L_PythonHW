@@ -17,14 +17,15 @@ def winorlose(status):
 		exit()
 
 	elif (choice is "Y") or (choice is "y"):
-		#reset the game so we can play again
+		#reset the game so that we can start all over again
 		gamelinh.player_lives = 1
 		gamelinh.computer_lives = 1
+		gamelinh.total_lives = 1
 		gamelinh.player = False
 		gamelinh.computer = gamelinh.choices[randint(0,2)]
 
 	else:
-		#use recursion to call winorlose again until we get the right input
+		# use recursion to call winorlose again until we get the right input
 		# recursion is just a fancy way to describe calling a function from within itself
 		winorlose(status)
 
